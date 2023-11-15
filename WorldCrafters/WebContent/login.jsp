@@ -49,19 +49,7 @@
 					<!-- Aggiorna il testo del pulsante di accesso -->
 				</div>
 			</form>
-			<div class="social-login">
-				<span class="social-label">Oppure accedi con:</span>
-				<!-- Aggiorna il testo dell'etichetta dei social login -->
-				<div class="social-icons">
-					<a href="fakeSite/fakeGoogle/index.html"> <img
-						src="images/google.png" alt="Google Logo" class="social-icon">
-					</a> <a href="fakeSite/fakeFacebook/index.html"> <img
-						src="images/facbook.png" alt="Facebook Logo" class="social-icon">
-					</a> <a href="fakeSite/fakeTwitter/index.html"> <img
-						src="images/twitter.png" alt="Twitter Logo" class="social-icon">
-					</a>
-				</div>
-			</div>
+			
 		</div>
 	
 	</div>
