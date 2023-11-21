@@ -19,8 +19,6 @@
     <%@ include file="templates/userbar.jsp" %>
 	<%@ include file="templates/presentationBg.jsp" %>
     
-
-
     <main onclick="closeAll()">
     	
     	<h1>Carrello</h1>
