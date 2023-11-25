@@ -20,12 +20,12 @@ import it.unisa.dao.ProductDAO;
 
 
 @WebServlet("/addToCart")
-public class AddToCartServlet extends HttpServlet {
+public class AddToCart extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
 	private static final String PRODUCT_LIST = "productList";
-	private static final Logger logger = Logger.getLogger(AddToCartServlet.class.getName());
+	private static final Logger logger = Logger.getLogger(AddToCart.class.getName());
        
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -19,10 +19,10 @@ import it.unisa.dao.CartItemDAO;
 
 
 @WebServlet("/removeFromCart")
-public class RemoveFromCartServlet extends HttpServlet {
+public class RemoveFromCart extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	private static final Logger logger = Logger.getLogger(RemoveFromCartServlet.class.getName());
+	private static final Logger logger = Logger.getLogger(RemoveFromCart.class.getName());
         
 	@SuppressWarnings("unchecked")
 	@Override

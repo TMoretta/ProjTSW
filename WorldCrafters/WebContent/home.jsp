@@ -21,19 +21,7 @@
     	<%@ include file="templates/presentationBg.jsp" %>
     	<p>Fatti ispirare dalle tradizioni<br>artigianali di tutto<br>il mondo</p>
     </div>
-     
-    <%-- Verifica se c'è un messaggio di ordine e mostra un popup 
-	<% String orderMessage = (String) request.getAttribute("orderMessage");
-	   if (orderMessage != null) { %>
-	   <script>
-	      window.onload = function() {
-	         alert('<%= orderMessage %>');
-	      }
-	   </script>
-	   <% request.removeAttribute("orderMessage"); %>
-	<% } %>
-	--%>
-	
+
     <main onclick="closeAll()">
 
         <div id="showcaseContainer">
@@ -51,9 +39,17 @@
 						        </a>
 	                        </div>
 	                        <div class="product-details">
-	                            <a href="product?id=<%= product.getId() %>" class="product-name">
-						            <%= product.getName() %>
-						        </a>
+	                            
+	                            <% if(product.getStatus()) { %>
+	                            	<a href="product?id=<%= product.getId() %>" class="product-name">
+						            	<%= product.getName() %>
+						        	</a>
+	                            <% } else { %>
+	                            	<a href="product?id=<%= product.getId() %>" class="product-name" style="color: red">
+						            	<%= product.getName() %>
+						        	</a>
+	                            <% } %>
+	                                
 	                            <div class="product-price">
 	                                € <%= String.format("%.2f", product.getPrice()) %>
 	                            </div> 

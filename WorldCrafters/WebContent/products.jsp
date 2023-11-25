@@ -54,9 +54,16 @@
 					        </a>
                         </div>
                         <div class="product-details">
-                            <a href="product?id=<%= product.getId() %>" class="product-name">
-					            <%= product.getName() %>
-					        </a>
+                            <% if(product.getStatus()) { %>
+	                            	<a href="product?id=<%= product.getId() %>" class="product-name">
+						            	<%= product.getName() %>
+						        	</a>
+                            <% } else { %>
+                            	<a href="product?id=<%= product.getId() %>" class="product-name" style="color: red">
+					            	<%= product.getName() %>
+					        	</a>
+                            <% } %>
+                            
                             <div class="product-price">
                                 € <%= String.format("%.2f", product.getPrice()) %>
                             </div>
@@ -70,8 +77,14 @@
     </main>
 	
 	<%
-	    String category = Encode.forHtml(request.getParameter("category"));
-	    String search = Encode.forHtml(request.getParameter("search"));
+	String category=null;
+	String search=null;
+	if(request.getParameter("category")!=null) {
+		category = Encode.forHtml(request.getParameter("category"));
+    }
+	if(request.getParameter("search")!=null) {
+		search = Encode.forHtml(request.getParameter("search"));
+    }
 	%>
 
     <%-- Mostra la paginazione solo se c'è più di una pagina --%>

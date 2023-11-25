@@ -21,10 +21,10 @@ import it.unisa.dao.UserDAO;
 
 
 @WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+public class Login extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	private static final Logger logger = Logger.getLogger(LoginServlet.class.getName());
+	private static final Logger logger = Logger.getLogger(Login.class.getName());
 	
 	private static final String LOGIN = "/login.jsp";
 	private static final String EMAIL = "email";
@@ -51,7 +51,6 @@ public class LoginServlet extends HttpServlet {
         	
 		//Se è admin
         if(adminDAO.authenticateEmail(email)) {
-			
         	caseAdmin(request, response, email, password);
 		} else {
 			//Controllo sè è un user	
@@ -80,6 +79,7 @@ public class LoginServlet extends HttpServlet {
             session.setMaxInactiveInterval(24*60*60);  //Imposta la durata della sessione a 24 ore
 
             try {
+            	
             	response.sendRedirect("home");
             } catch (IOException e) {
             	logger.log(Level.WARNING, e.getMessage());

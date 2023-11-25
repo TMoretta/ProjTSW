@@ -17,10 +17,10 @@ import it.unisa.dao.UserDAO;
 
 
 @WebServlet("/registration")
-public class RegistrationServlet extends HttpServlet {
+public class Registration extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	private static final Logger logger = Logger.getLogger(RegistrationServlet.class.getName());
+	private static final Logger logger = Logger.getLogger(Registration.class.getName());
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

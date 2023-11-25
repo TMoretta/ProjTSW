@@ -16,10 +16,10 @@ import it.unisa.dao.PurchaseDAO;
 
 
 @WebServlet("/DeletePurchaseRequestServlet")
-public class DeletePurchaseRequestServlet extends HttpServlet {
+public class DeletePurchaseRequest extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	private static final Logger logger = Logger.getLogger(DeletePurchaseRequestServlet.class.getName());
+	private static final Logger logger = Logger.getLogger(DeletePurchaseRequest.class.getName());
        
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

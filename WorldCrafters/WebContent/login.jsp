@@ -42,11 +42,9 @@
 				<%
 				}
 				%>
-				
-				
+						
 				<div class="form-group form-button">
 					<input type="submit" name="signin" id="signin" value="Accedi" disabled/>
-					<!-- Aggiorna il testo del pulsante di accesso -->
 				</div>
 			</form>
 			

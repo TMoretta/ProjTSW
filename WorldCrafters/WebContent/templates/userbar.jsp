@@ -22,6 +22,8 @@
 	<% } else if(session1.getAttribute("isAdmin")!=null && session1.getAttribute("isAdmin").toString().equals("true")) { %>
 		<div id="userbar">
 	        <ul>
+	            <li><a href="add_product.jsp">Add a product<br></a></li>
+	            <li><a href="delete_requests">Delete requests<br></a></li>
 	            <li><a href="logout" onclick="invalidateSession()">Logout<br></a></li>
 	        </ul>
 	    </div>

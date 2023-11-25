@@ -14,11 +14,11 @@ import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/checkout")
-public class CheckoutServlet extends HttpServlet {
+public class Checkout extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private static final Logger logger = Logger.getLogger(CheckoutServlet.class.getName());
+	private static final Logger logger = Logger.getLogger(Checkout.class.getName());
     	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

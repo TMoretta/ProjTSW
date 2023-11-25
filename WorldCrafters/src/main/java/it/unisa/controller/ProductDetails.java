@@ -16,11 +16,11 @@ import it.unisa.dao.ProductDAO;
 
 
 @WebServlet("/product")
-public class ProductDetailsServlet extends HttpServlet {
+public class ProductDetails extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private static final Logger logger = Logger.getLogger(ProductDetailsServlet.class.getName());
+	private static final Logger logger = Logger.getLogger(ProductDetails.class.getName());
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

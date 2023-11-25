@@ -26,11 +26,11 @@ import it.unisa.dao.PurchaseItemDAO;
 
 
 @WebServlet("/CheckoutForm")
-public class CheckoutFormServlet extends HttpServlet {
+public class CheckoutForm extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private static final Logger logger = Logger.getLogger(CheckoutFormServlet.class.getName());
+	private static final Logger logger = Logger.getLogger(CheckoutForm.class.getName());
        
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
